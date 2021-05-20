@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.AddRoomController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="4.0" layoutY="7.0" prefHeight="37.0" prefWidth="660.0" style="-fx-background-color: #E0F7FA;">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Room">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <TabPane layoutY="46.0" prefHeight="354.0" prefWidth="668.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Subject">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;">
+                     <children>
+                        <ComboBox fx:id="subjectcombo" layoutX="144.0" layoutY="75.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comborrom1" layoutX="494.0" layoutY="75.0" prefWidth="150.0" />
+                        <Text layoutX="30.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Subject">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="381.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="lbl1" layoutX="303.0" layoutY="139.0" onMouseClicked="#getlbl1" prefHeight="120.0" prefWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextArea>
+                        <Text layoutX="30.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Subject &amp; Selected Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="558.0" layoutY="185.0" mnemonicParsing="false" onAction="#subtbn" text="Add Room" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Tag">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;">
+                     <children>
+                        <ComboBox fx:id="tagcombo" layoutX="144.0" layoutY="88.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comboroom2" layoutX="479.0" layoutY="88.0" prefWidth="150.0" />
+                        <Text layoutX="42.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Tag">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="362.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="lbl2" layoutX="294.0" layoutY="161.0" onMouseClicked="#getlbl2" prefHeight="110.0" prefWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextArea>
+                        <Text layoutX="52.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Tag &amp; Selected Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="548.0" layoutY="198.0" mnemonicParsing="false" onAction="#tagbtn" text="Add Room" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Lecturer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;">
+                     <children>
+                        <ComboBox fx:id="leccombo" layoutX="140.0" layoutY="92.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comboroom3" layoutX="467.0" layoutY="92.0" prefWidth="150.0" />
+                        <Text layoutX="14.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Lecturer">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="353.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="lbl3" layoutX="300.0" layoutY="166.0" onMouseClicked="#getlbl3" prefHeight="120.0" prefWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextArea>
+                        <Text layoutX="25.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Lecturer &amp; Selected Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="542.0" layoutY="212.0" mnemonicParsing="false" onAction="#lecbtn" text="Add Room" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Group">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;">
+                     <children>
+                        <ComboBox fx:id="groupcombo" layoutX="129.0" layoutY="88.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comboroom4" layoutX="471.0" layoutY="88.0" prefWidth="150.0" />
+                        <Text layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Group or Sub Group" wrappingWidth="102.576171875">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="362.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="lbl4" layoutX="279.0" layoutY="152.0" onMouseClicked="#getlbl4" prefHeight="119.0" prefWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextArea>
+                        <Text layoutX="22.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Group &amp; Selected Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="532.0" layoutY="204.0" mnemonicParsing="false" onAction="#groupbtn" text="Add Room" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Session">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;">
+                     <children>
+                        <ComboBox fx:id="sessioncombo" layoutX="167.0" layoutY="92.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comboroom5" layoutX="504.0" layoutY="92.0" prefWidth="150.0" />
+                        <Text layoutX="43.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Session">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <Text layoutX="394.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <TextArea fx:id="lbl5" layoutX="294.0" layoutY="143.0" onMouseClicked="#getlbl5" prefHeight="122.0" prefWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextArea>
+                        <Text layoutX="18.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Session &amp; Selected Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <Button layoutX="529.0" layoutY="202.0" mnemonicParsing="false" onAction="#sessionbtn" text="Add Room" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Consecutive Session">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;">
+                     <children>
+                        <ComboBox fx:id="consessioncombo" layoutX="174.0" layoutY="88.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comboroom6" layoutX="490.0" layoutY="88.0" prefWidth="150.0" />
+                        <Text layoutX="14.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Consecutive Session" wrappingWidth="156.4970703125">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <Text layoutX="376.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <TextArea fx:id="lbl6" layoutX="290.0" layoutY="157.0" onMouseClicked="#getlbl6" prefHeight="123.0" prefWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></TextArea>
+                        <Text layoutX="14.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Consecutive Session &amp; Selected Room" wrappingWidth="273.14892578125">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <Button layoutX="554.0" layoutY="196.0" mnemonicParsing="false" onAction="#consessionbtn" text="Add Room" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Tag &amp; Subject">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;">
+                     <children>
+                        <ComboBox fx:id="tag1combo" layoutX="132.0" layoutY="44.0" prefWidth="150.0" />
+                        <ComboBox fx:id="subcombo1" layoutX="132.0" layoutY="111.0" prefWidth="150.0" />
+                        <ComboBox fx:id="comboroom7" layoutX="490.0" layoutY="44.0" prefWidth="150.0" />
+                        <TextArea fx:id="lbl7" layoutX="334.0" layoutY="172.0" onMouseClicked="#getlbl7" prefHeight="122.0" prefWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextArea>
+                        <Text layoutX="20.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Tag">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <Text layoutX="20.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Subject">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <Text layoutX="377.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <Text layoutX="29.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Tag,Subject &amp; Selected Room">
+                           <font>
+                              <Font size="17.0" />
+                           </font></Text>
+                        <Button layoutX="565.0" layoutY="221.0" mnemonicParsing="false" onAction="#tagsubbtn" text="Add Room" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

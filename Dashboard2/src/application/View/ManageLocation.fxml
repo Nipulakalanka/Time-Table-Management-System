@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.ManageLocationController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="735.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.ManageLocationController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="-6.0" layoutY="15.0" prefHeight="29.0" prefWidth="735.0" style="-fx-background-color: #B2EBF2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -36,12 +36,12 @@
       </TableView>
       <HBox alignment="CENTER" layoutX="11.0" layoutY="312.0" prefHeight="63.0" prefWidth="713.0">
          <children>
-            <Button fx:id="btnupdate" mnemonicParsing="false" onAction="#EditLOcation" prefHeight="42.0" prefWidth="88.0" style="-fx-cursor: hand; -fx-background-color: #FFEB3B; -fx-border-color: #2979FF;" text="Update">
+            <Button fx:id="btnupdate" mnemonicParsing="false" onAction="#EditLOcation" prefHeight="42.0" prefWidth="88.0" style="-fx-cursor: hand; -fx-background-color: #EC407A; -fx-border-color: #2979FF;" text="Update">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button fx:id="btndelete" mnemonicParsing="false" onAction="#DeleteLocation" prefHeight="42.0" prefWidth="88.0" style="-fx-cursor: hand; -fx-background-color: #76FF03; -fx-border-color: #2979FF;" text="Delete">
+            <Button fx:id="btndelete" mnemonicParsing="false" onAction="#DeleteLocation" prefHeight="42.0" prefWidth="88.0" style="-fx-cursor: hand; -fx-background-color: #FDD835; -fx-border-color: #2979FF;" text="Delete">
                <HBox.margin>
                   <Insets left="40.0" />
                </HBox.margin>

@@ -2,13 +2,15 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="tab" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.AddLocationController">
+<AnchorPane fx:id="tab" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="575.0" style="-fx-background-color: #DAF7A6;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.AddLocationController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="26.0" prefHeight="32.0" prefWidth="553.0" style="-fx-background-color: #B2EBF2;" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
          <children>
@@ -79,7 +81,22 @@
             </Text>
             <HBox alignment="CENTER" prefHeight="60.0" prefWidth="666.0">
                <children>
-                  <TextField fx:id="tfRtype" prefHeight="25.0" prefWidth="263.0" />
+                  <RadioButton fx:id="lechall" mnemonicParsing="false" onAction="#RadioSelect" text="Lec Hall">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="mygroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="lab" mnemonicParsing="false" onAction="#RadioSelect" text="Lab" toggleGroup="$mygroup">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
                </children>
             </HBox>
          </children>
@@ -113,7 +130,7 @@
             <Insets top="10.0" />
          </padding>
          <children>
-            <Button fx:id="savebtn" mnemonicParsing="false" onMouseClicked="#Save" prefHeight="31.0" prefWidth="71.0" style="-fx-background-color: #4DD0E1; -fx-border-color: #0D47A1; -fx-cursor: hand; -fx-border-hover: #0fbcf9;" text="Save" />
+            <Button fx:id="savebtn" mnemonicParsing="false" onMouseClicked="#Save" prefHeight="31.0" prefWidth="71.0" style="-fx-background-color: #64FFDA; -fx-border-color: #0D47A1; -fx-cursor: hand; -fx-border-hover: #0fbcf9;" text="Save" />
          </children>
       </HBox>
    </children>

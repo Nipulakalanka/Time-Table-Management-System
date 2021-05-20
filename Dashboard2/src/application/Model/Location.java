@@ -10,7 +10,7 @@ public class Location {
 	
 	
 	public Location(int id,String bname, String rname, String rtype, int cap) {
-		super();
+		
 		
 		this.id=id;
 		this.bname = bname;

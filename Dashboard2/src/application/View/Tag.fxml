@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.TagController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.TagController">
    <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="subname" layoutX="59.0" layoutY="107.0" prefHeight="18.0" prefWidth="142.0" text="Subject Name" />
             <Label fx:id="rtag" layoutX="59.0" layoutY="191.0" prefHeight="18.0" prefWidth="142.0" text="Related Tag" />
@@ -17,7 +17,7 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DAF7A6;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="subjectname" layoutX="31.0" layoutY="104.0" promptText="DS" />
             <TextField fx:id="subjectcode" layoutX="31.0" layoutY="146.0" promptText="IT3020" />

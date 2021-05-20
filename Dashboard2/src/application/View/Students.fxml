@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.StudentController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="686.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.StudentController">
    <left>
-      <AnchorPane prefHeight="426.0" prefWidth="242.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="426.0" prefWidth="242.0" style="-fx-background-color: #DAF7A6;" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="academicyear" layoutX="33.0" layoutY="76.0" prefHeight="18.0" prefWidth="202.0" text="Academic Year Semester">
                <font>
@@ -46,7 +46,7 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="429.0" prefWidth="441.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="429.0" prefWidth="441.0" style="-fx-background-color: #DAF7A6;" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="generateSID" layoutX="-56.0" layoutY="259.0" mnemonicParsing="false" onAction="#GenerateId" prefHeight="30.0" prefWidth="152.0" text="GenerateID" />
             <Button fx:id="clearStu" layoutX="43.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#Clear" prefHeight="30.0" prefWidth="152.0" text="Clear" />

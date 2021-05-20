@@ -16,6 +16,7 @@ import java.util.ResourceBundle;
 
 import application.Main;
 import application.Model.Location;
+import application.Model.Students;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -44,6 +45,15 @@ public class AppController implements Initializable {
     double x = 0, y = 0;
     
     @FXML
+    private Label countlbl2;
+
+    @FXML
+    private Label countlbl1;
+
+    @FXML
+    private Label countlbl3;
+    
+    @FXML
     private Label countlbl;
     
     @FXML
@@ -61,8 +71,15 @@ public class AppController implements Initializable {
     @FXML
     private Label latestlec;
     
+    @FXML
+    private Label grouplbl;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+    	
+    	getstat1();
+    	getstat2();
+    	getstat3();
     	
         XYChart.Series<String, Number> series =new XYChart.Series<>();
         series.setName("Labortory");
@@ -248,15 +265,267 @@ public class AppController implements Initializable {
 
     }
     
+    @FXML
+    void btnworkingday(MouseEvent event) {
+    	
+    	try {
+			Parent root =FXMLLoader.load(Main.class.getResource("/application/View/AddTime.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage =new Stage();
+			stage.setScene(scene);
+			stage.show();
+			
+			
+			
+			
+			
+			
+						
+			
+			
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+
+    }
+    
+    @FXML
+    void session1btn(MouseEvent event) {
+    	
+    	try {
+			Parent root =FXMLLoader.load(Main.class.getResource("/application/View/lectureSession.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage =new Stage();
+			stage.setScene(scene);
+			stage.show();
+			
+			
+			
+			
+			
+			
+						
+			
+			
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+
+
+    }
+    
+    
+    
+    @FXML
+    void lecbtn1(MouseEvent event) {
+    	
+    	
+    	try {
+			Parent root =FXMLLoader.load(Main.class.getResource("/application/View/lectures.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage =new Stage();
+			stage.setScene(scene);
+			stage.show();
+			
+			
+			
+			
+			
+			
+						
+			
+			
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+
+
+    }
+    
+    
+    @FXML
+    void roombtn(MouseEvent event) {
+    	try {
+			Parent root =FXMLLoader.load(Main.class.getResource("/application/View/Addroom.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage =new Stage();
+			stage.setScene(scene);
+			stage.show();
+			
+			
+			
+			
+			
+			
+						
+			
+			
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+
+
+
+    }
+    
+    
+    
+    @FXML
+    void subbtn(MouseEvent event) {
+    	
+    	try {
+			Parent root =FXMLLoader.load(Main.class.getResource("/application/View/subjects.fxml"));
+			Scene scene = new Scene(root);
+			Stage stage =new Stage();
+			stage.setScene(scene);
+			stage.show();
+			
+			
+			
+			
+			
+			
+						
+			
+			
+			
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+
+
+    }
 
     
     
     @FXML
     public void RoomCount(MouseEvent event) {
-    	int countM = 0;
+		/*
+		 * int countM = 0;
+		 * 
+		 * Connection con =getConnection(); String query ="SELECT * FROM location";
+		 * Statement st; ResultSet rs;
+		 * 
+		 * try { st =con.createStatement(); rs =st.executeQuery(query); Location
+		 * location; while(rs.next()) { countM++; }
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * }catch(Exception e) { e.printStackTrace();
+		 * 
+		 * }finally {
+		 * 
+		 * System.out.println(countM); countlbl.setText(String.valueOf(countM)); }
+		 */
+		
+		
     	
-		Connection con =getConnection();
-		String query ="SELECT * FROM location";
+
+    }
+    
+    @FXML
+    public void StudentCount(MouseEvent event) {
+    	
+		/*
+		 * int countM1 = 0;
+		 * 
+		 * Connection con =getConnection(); String query ="SELECT * FROM students";
+		 * Statement st; ResultSet rs;
+		 * 
+		 * try { st =con.createStatement(); rs =st.executeQuery(query); Students
+		 * students; while(rs.next()) { countM1++; }
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * }catch(Exception e) { e.printStackTrace();
+		 * 
+		 * }finally {
+		 * 
+		 * System.out.println(countM1); countlbl1.setText(String.valueOf(countM1)); }
+		 */
+		
+		
+    	
+
+    }
+
+    
+    public void getLatlineGroup(MouseEvent event){
+    	
+		/*
+		 * Connection con =getConnection(); String query
+		 * =("SELECT *FROM students ORDER BY id DESC LIMIT 1;"); Statement st; ResultSet
+		 * rs;
+		 * 
+		 * try { st =con.createStatement(); rs =st.executeQuery(query); Location
+		 * location; while(rs.next()) {
+		 * 
+		 * String groupid =rs.getString("groupid"); System.out.println("Bname is:"
+		 * +groupid);
+		 * 
+		 * grouplbl.setText(groupid);
+		 * 
+		 * 
+		 * }
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * }catch(Exception e) { e.printStackTrace();
+		 * 
+		 * 
+		 * 
+		 * }
+		 */
+		
+    	
+    	
+    	
+    	
+    }
+    
+    @FXML
+    void GraphView(ActionEvent event) {
+    	try {
+    	Parent root =FXMLLoader.load(Main.class.getResource("/application/View/PieChart.fxml"));
+    	Scene scene = new Scene(root);
+		Stage stage =new Stage();
+		stage.setScene(scene);
+		stage.show();
+    	
+    	
+
+    	} catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+
+
+    
+    }
+    
+    public void getstat1() {
+    	Connection con =getConnection();
+		String query =("SELECT *FROM students ORDER BY id DESC LIMIT 1;");
 		Statement st;
 		ResultSet rs;
 		
@@ -265,7 +534,77 @@ public class AppController implements Initializable {
 			rs =st.executeQuery(query);
 			Location location;
 			while(rs.next()) {
-				countM++;
+				
+				String groupid =rs.getString("groupid");
+				System.out.println("Bname is:" +groupid);
+				
+				grouplbl.setText(groupid);
+				
+				
+			}
+				
+				
+				
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			
+			
+			
+		}
+    	
+    }
+    
+    public void getstat2() {
+    	
+       	int countM = 0;
+    	
+    		Connection con =getConnection();
+    		String query ="SELECT * FROM location";
+    		Statement st;
+    		ResultSet rs;
+    		
+    		try {
+    			st =con.createStatement();
+    			rs =st.executeQuery(query);
+    			Location location;
+    			while(rs.next()) {
+    				countM++;
+    			}
+    				
+    				
+    				
+    			
+    			
+    		}catch(Exception e) {
+    			e.printStackTrace();
+    			
+    		}finally {
+    			
+    			System.out.println(countM);
+    			countlbl.setText(String.valueOf(countM));
+    		}
+    		
+    	
+    }
+    
+    
+    public void getstat3() {
+    	
+    	int countM1 = 0;
+    	
+		Connection con =getConnection();
+		String query ="SELECT * FROM students";
+		Statement st;
+		ResultSet rs;
+		
+		try {
+			st =con.createStatement();
+			rs =st.executeQuery(query);
+			Students students;
+			while(rs.next()) {
+				countM1++;
 			}
 				
 				
@@ -277,54 +616,34 @@ public class AppController implements Initializable {
 			
 		}finally {
 			
-			System.out.println(countM);
-			countlbl.setText(String.valueOf(countM));
+			System.out.println(countM1);
+			countlbl1.setText(String.valueOf(countM1));
 		}
 		
-		
-		
-    	
-
-    }
-    
-    public void getLatline(MouseEvent event){
-    	
-    	Connection con =getConnection();
-		String query =("SELECT *FROM location ORDER BY id DESC LIMIT 1;");
-		Statement st;
-		ResultSet rs;
-		
-		try {
-			st =con.createStatement();
-			rs =st.executeQuery(query);
-			Location location;
-			while(rs.next()) {
-				
-				String bname =rs.getString("Bname");
-				System.out.println("Bname is:" +bname);
-				
-				latestlec.setText(bname);
-				
-				
-			}
-				
-				
-				
-			
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-			
-			
-			
-		}
-		
-		
-		
-    	
-    	
-    	
     	
     }
     
+    
+	/*
+	 * public void getstat4() { int countM1 = 0;
+	 * 
+	 * Connection con =getConnection(); String query ="SELECT * FROM student";
+	 * Statement st; ResultSet rs;
+	 * 
+	 * try { st =con.createStatement(); rs =st.executeQuery(query); Students
+	 * students; while(rs.next()) { countM1++; }
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * }catch(Exception e) { e.printStackTrace();
+	 * 
+	 * }finally {
+	 * 
+	 * System.out.println(countM1); countlbl1.setText(String.valueOf(countM1)); }
+	 * 
+	 * 
+	 * }
+	 */
 }

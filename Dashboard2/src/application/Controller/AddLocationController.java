@@ -7,11 +7,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
 import application.Model.Location;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,8 +21,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -31,8 +34,7 @@ public class AddLocationController implements Initializable {
 	private TextField tfBname;
 	@FXML
 	private TextField tfRname;
-	@FXML
-	private TextField tfRtype;
+	
 	@FXML
 	private TextField tfCap;
 	@FXML
@@ -40,11 +42,34 @@ public class AddLocationController implements Initializable {
 	@FXML
 	private AnchorPane tab;
 	
+	@FXML
+    private RadioButton lechall;
+
+    @FXML
+    private ToggleGroup mygroup;
+
+    @FXML
+    private RadioButton lab;
+	
 	String query =null;
-	ResultSet resultsset =null;
-	PreparedStatement preparedStatement;
+	/*
+	 * ResultSet resultsset =null; PreparedStatement preparedStatement;
+	 * 
+	 */
+	
+
+	private static Statement stmt = null;
+	private static ResultSet rs = null;
+	private static PreparedStatement preparedStatement =null;
 	Location location;
 	
+
+	/*
+	 * public final static String cloudURL =
+	 * "jdbc:mysql://43.250.240.213:3306/student_ms?autoReconnect=true&useSSL=false&verifyServerCertificate=false";
+	 * public final static String cloudUser = "itpmUser"; public final static String
+	 * cloudUserPW = "itpm@1234";
+	 */
 	
 	
 	@Override
@@ -57,12 +82,13 @@ public class AddLocationController implements Initializable {
 	public Connection getConnection() {
 		Connection con;
 		try{
-			con =DriverManager.getConnection("jdbc:mysql://localhost:3306/itpm", "root","");
+			con =DriverManager.getConnection("jdbc:mysql://itpmserver2021.mysql.database.azure.com:3306/itpmnew?autoReconnect=true&useSSL=false&verifyServerCertificate=false", "itpmUser@itpmserver2021","itpm@1234");
 			return con;
 			
 		}catch(Exception e) {
 			System.out.println("Error: "+e.getMessage());
 			return null;
+			
 			
 		}
 	}
@@ -72,7 +98,7 @@ public class AddLocationController implements Initializable {
 	public void Save(MouseEvent event) {
 		String bname = tfBname.getText();
 		String rname =tfRname.getText();
-		String rtype =tfRtype.getText();
+		String rtype =getRadioButton();
 		String cap=tfCap.getText();
 		
 		if(bname.isEmpty() ||rname.isEmpty()||rtype.isEmpty()||cap.isEmpty()) {
@@ -136,7 +162,7 @@ public class AddLocationController implements Initializable {
 		preparedStatement = getConnection().prepareStatement(query);
 		preparedStatement.setString(1, tfBname.getText());
 		preparedStatement.setString(2, tfRname.getText());
-		preparedStatement.setString(3, tfRtype.getText());
+		preparedStatement.setString(3, getRadioButton());
 		preparedStatement.setString(4, tfCap.getText());
 		preparedStatement.execute();
 		
@@ -146,6 +172,28 @@ public class AddLocationController implements Initializable {
 	}
 			
 		}
+	
+	 @FXML
+	    void RadioSelect(ActionEvent event) {
+		 
+		 getRadioButton();
+
+	    }
+
+	 public String getRadioButton() {
+	    	String message ="";
+			if(lechall.isSelected()) {
+				message += lechall.getText() +"\n";
+			}
+			
+			if(lab.isSelected()) {
+				message += lab.getText() +"\n";
+			}
+			
+			System.out.println(message);
+			return message;
+	    	
+	    }
 		
 		
 		
