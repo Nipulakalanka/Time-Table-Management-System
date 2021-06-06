@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="703.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.sessiongroupformController">
+   <children>
+      <BorderPane prefHeight="703.0" prefWidth="1025.0">
+         <center>
+            <AnchorPane prefHeight="694.0" prefWidth="1010.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="410.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture 1 name" wrappingWidth="93.336669921875" />
+                  <Text layoutX="410.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Code " wrappingWidth="93.336669921875" />
+                  <Text layoutX="410.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag 2 name" wrappingWidth="117.33670043945312" />
+                  <Text layoutX="410.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag 1 name" wrappingWidth="93.336669921875" />
+                  <Text layoutX="410.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture 2 name" wrappingWidth="93.336669921875" />
+                  <Text layoutX="410.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group ID" wrappingWidth="93.336669921875" />
+                  <Text layoutX="410.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject" wrappingWidth="93.336669921875" />
+                  <TextField fx:id="sgl1" layoutX="596.0" layoutY="198.0" />
+                  <TextField fx:id="sgl2" layoutX="597.0" layoutY="241.0" />
+                  <TextField fx:id="sgsc" layoutX="596.0" layoutY="276.0" promptText="IT1010" />
+                  <TextField fx:id="sgs" layoutX="597.0" layoutY="316.0" promptText="OOP" />
+                  <TextField fx:id="sggid" layoutX="596.0" layoutY="355.0" promptText="Y1.S1.01.01" />
+                  <TextField fx:id="sgt1" layoutX="596.0" layoutY="395.0" promptText="ex:Lecture" />
+                  <TextField fx:id="sgt2" layoutX="597.0" layoutY="437.0" promptText="ex:Tutorial" />
+                  <Button layoutX="439.0" layoutY="515.0" mnemonicParsing="false" onMouseClicked="#addconsecetive" text="Add Consecetive session" />
+                  <Button fx:id="ccle" layoutX="612.0" layoutY="514.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="118.0" text="Clear" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

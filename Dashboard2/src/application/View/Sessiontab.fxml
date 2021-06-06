@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#conupdate" prefHeight="754.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.sessiontabController">
+   <children>
+      <AnchorPane layoutY="-12.0" prefHeight="106.0" prefWidth="951.0">
+         <children>
+            <Text layoutX="86.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Session Management" wrappingWidth="285.33678436279297">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-4.0" layoutY="77.0" prefHeight="627.0" prefWidth="858.0" AnchorPane.leftAnchor="46.3" AnchorPane.rightAnchor="46.3">
+         <children>
+            <BorderPane prefHeight="645.0" prefWidth="858.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <top>
+                  <TabPane prefHeight="603.0" prefWidth="767.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                      <Tab text="Consecetive sesstion">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="consec" layoutX="-2.0" layoutY="79.0" onMouseClicked="#getselect" prefHeight="218.0" prefWidth="785.0">
+                                      <columns>
+                                        <TableColumn fx:id="cid" prefWidth="89.60000228881836" text="Consecetive id" />
+                                          <TableColumn fx:id="clec1" prefWidth="136.00001525878906" text="Lecture 1" />
+                                          <TableColumn fx:id="clec2" prefWidth="125.60003662109375" text="Lecture 2" />
+                                          <TableColumn fx:id="csc" prefWidth="99.20001220703125" text="Subject code" />
+                                          <TableColumn fx:id="cs" prefWidth="72.79998779296875" text="Subject" />
+                                          <TableColumn fx:id="cgid" minWidth="8.79998779296875" prefWidth="87.20001220703125" text="Group ID" />
+                                          <TableColumn fx:id="ctn" prefWidth="85.5999755859375" text="Tag Name" />
+                                          <TableColumn fx:id="ct2" prefWidth="88.7999267578125" text="Tag 2 Name" />
+                                          
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="ccsf" layoutX="535.0" layoutY="317.0" mnemonicParsing="false" onAction="#gofrom" prefHeight="26.0" prefWidth="174.0" text="Add Consecetive session" />
+                                    <Button fx:id="cdelete" layoutX="329.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#condelete" prefHeight="26.0" prefWidth="174.0" text="Delete" />
+                                    <Text layoutX="70.0" layoutY="410.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consecetive ID" wrappingWidth="122.13673400878906" />
+                                    <Text layoutX="70.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture 1" wrappingWidth="93.33673095703125" />
+                                    <Text layoutX="70.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture 2" wrappingWidth="122.13673400878906" />
+                                    <Text layoutX="70.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject" wrappingWidth="122.13673400878906" />
+                                    <Text layoutX="70.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject code" wrappingWidth="122.13673400878906" />
+                                    <Text layoutX="412.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag Name" wrappingWidth="122.13673400878906" />
+                                    <Text layoutX="412.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group ID" wrappingWidth="122.13673400878906" />
+                                    <Text layoutX="412.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag 2 Name" wrappingWidth="122.13673400878906" />
+                                    <TextField fx:id="tcid" layoutX="180.0" layoutY="393.0" />
+                                    <TextField fx:id="tl2" layoutX="180.0" layoutY="455.0" />
+                                    <TextField fx:id="tt2" layoutX="514.0" layoutY="503.0" />
+                                    <TextField fx:id="tt1" layoutX="514.0" layoutY="468.0" />
+                                    <TextField fx:id="tgid" layoutX="514.0" layoutY="430.0" />
+                                    <TextField fx:id="tsc" layoutX="180.0" layoutY="490.0" />
+                                    <TextField fx:id="tl1" layoutX="180.0" layoutY="423.0" />
+                                    <TextField fx:id="ts" layoutX="180.0" layoutY="523.0" />
+                                    <Button fx:id="cupdate" layoutX="131.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#conupdate" prefHeight="26.0" prefWidth="174.0" text="Update" />
+                                    <TextField fx:id="filtertext" layoutX="475.0" layoutY="22.0" prefHeight="26.0" prefWidth="189.0" promptText="enter name to search" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Parallel session">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="paid" layoutY="81.0" onMouseClicked="#getselectpa" prefHeight="191.0" prefWidth="778.0">
+                                       <columns>
+                                          <TableColumn fx:id="ppaid" prefWidth="66.39999008178711" text="ID" />
+                                          <TableColumn fx:id="pl" prefWidth="173.60006713867188" text="Lecture" />
+                                          <TableColumn fx:id="pasc" prefWidth="98.4000244140625" text="Subject code" />
+                                          <TableColumn fx:id="pasn" prefWidth="85.5999755859375" text="Subject Name" />
+                                          <TableColumn fx:id="pagid" prefWidth="98.4000244140625" text="Group ID" />
+                                          <TableColumn fx:id="pat" prefWidth="65.5999755859375" text="Tags" />
+                                          <TableColumn fx:id="panof" prefWidth="127.20001220703125" text="Number of Students" />
+                                          <TableColumn fx:id="padu" prefWidth="64.7999267578125" text="Duration" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="paddb" layoutX="469.0" layoutY="298.0" mnemonicParsing="false" onAction="#addparallelsession" prefHeight="26.0" prefWidth="174.0" text="Add session" />
+                                    <Text layoutX="81.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="34.007415771484375" />
+                                    <Text layoutX="81.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture" wrappingWidth="57.97149658203125" />
+                                    <Text layoutX="81.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Code" />
+                                    <Text layoutX="81.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Name" />
+                                    <Text layoutX="399.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group ID" />
+                                    <Text layoutX="399.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tags" wrappingWidth="36.55078125" />
+                                    <Text layoutX="399.0" layoutY="503.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Students" />
+                                    <Text layoutX="399.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" wrappingWidth="75.8773193359375" />
+                                    <TextField fx:id="ptid" layoutX="170.0" layoutY="399.0" />
+                                    <TextField fx:id="ptd" layoutX="537.0" layoutY="539.0" />
+                                    <TextField fx:id="ptns" layoutX="537.0" layoutY="486.0" />
+                                    <TextField fx:id="ptt" layoutX="537.0" layoutY="436.0" />
+                                    <TextField fx:id="ptgid" layoutX="537.0" layoutY="390.0" />
+                                    <TextField fx:id="ptl" layoutX="170.0" layoutY="448.0" />
+                                    <TextField fx:id="pts" layoutX="170.0" layoutY="544.0" />
+                                    <TextField fx:id="ptsc" layoutX="170.0" layoutY="494.0" />
+                                    <Button fx:id="pbdele" layoutX="262.0" layoutY="298.0" mnemonicParsing="false" onAction="#padelete" prefHeight="26.0" prefWidth="174.0" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab text="Non ovelap sessions">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="noid" layoutY="77.0" onMouseClicked="#getselectnon" prefHeight="206.0" prefWidth="778.0">
+                                       <columns>
+                                          <TableColumn fx:id="naid" prefWidth="61.599971771240234" text="ID" />
+                                          <TableColumn fx:id="nal" prefWidth="207.99996948242188" text="Lecture " />
+                                          <TableColumn fx:id="nasc" prefWidth="103.2000732421875" text="Subject code" />
+                                          <TableColumn fx:id="nasn" prefWidth="97.5999755859375" text="Subject Name" />
+                                          <TableColumn fx:id="nagi" prefWidth="73.60003662109375" text="Group ID" />
+                                          <TableColumn fx:id="nat" prefWidth="65.60003662109375" text="Tags" />
+                                          <TableColumn fx:id="nanss" prefWidth="104.79996337890623" text="Number of Students" />
+                                          <TableColumn fx:id="nad" prefWidth="75.0" text="Duration" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="addnos" layoutX="446.0" layoutY="331.0" mnemonicParsing="false" onAction="#addnonoverlapses" prefHeight="26.0" prefWidth="174.0" text="Add session" />
+                                    <Text layoutX="89.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="143.73678588867188" />
+                                    <Text layoutX="89.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Code" wrappingWidth="143.73678588867188" />
+                                    <Text layoutX="89.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lecture" wrappingWidth="143.73678588867188" />
+                                    <Text layoutX="389.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Students" wrappingWidth="143.73678588867188" />
+                                    <Text layoutX="389.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tags" wrappingWidth="143.73678588867188" />
+                                    <Text layoutX="389.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Group ID" wrappingWidth="143.73678588867188" />
+                                    <Text layoutX="389.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Duration" wrappingWidth="143.73678588867188" />
+                                    <Text layoutX="89.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Name" wrappingWidth="143.73678588867188" />
+                                    <TextField fx:id="ntid" layoutX="186.0" layoutY="402.0" />
+                                    <TextField fx:id="ntd" layoutX="533.0" layoutY="561.0" />
+                                    <TextField fx:id="ntns" layoutX="533.0" layoutY="507.0" />
+                                    <TextField fx:id="ntt" layoutX="533.0" layoutY="454.0" />
+                                    <TextField fx:id="ntgid" layoutX="533.0" layoutY="399.0" />
+                                    <TextField fx:id="ntsc" layoutX="186.0" layoutY="507.0" />
+                                    <TextField fx:id="nts" layoutX="186.0" layoutY="561.0" />
+                                    <TextField fx:id="ntl" layoutX="186.0" layoutY="454.0" />
+                                    <Button fx:id="ndelete" layoutX="233.0" layoutY="331.0" mnemonicParsing="false" onAction="#nondelete" prefHeight="26.0" prefWidth="174.0" text="Delete" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
