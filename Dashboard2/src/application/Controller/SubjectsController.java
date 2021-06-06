@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -92,18 +93,18 @@ public class SubjectsController implements Initializable {
 
         }
 
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/application/View/subjectDetails.fxml"));
-
-            Scene scene = new Scene(root);
-            Stage stage =new Stage();
-            stage.setScene(scene);
-            stage.show();
-
-
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Parent root = FXMLLoader.load(getClass().getResource("subjectDetails.fxml"));
+//
+//            Scene scene = new Scene(root);
+//            Stage stage =new Stage();
+//            stage.setScene(scene);
+//            stage.show();
+//
+//
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
 
 
 
@@ -180,63 +181,38 @@ public class SubjectsController implements Initializable {
 
     }
 
+    @FXML
+    void clear(ActionEvent event) {
+
+
+//        offerdYearchoice.setItems(null);
+        subjectnameChoice.setText(" ");
+        subjectcodeChoice.setText(" ");
+        notuteChoice.setText(" ");
+        nolecChoice.setText(" ");
+        nolabChoice.setText(" ");
+        noevaluationChoice.setText(" ");
+        nolabChoice.setText(" ");
+
+    }
+
+    @FXML
+    void next(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("/View/subjectDetails.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage =new Stage();
+        stage.setScene(scene);
+        stage.show();
+
+
+
+    }
+
+
 
 }
 
-
-
-
-
-
-
-
-
-//
-//    @FXML
-//    private ChoiceBox<String> offerdyearChoice;
-//    private String[] offerdyear = {"1","2","3","4"};
-//
-//    @FXML
-//    private Spinner mySpinnerTutorial;
-//
-//    @FXML
-//    private Spinner mySpinnerLec;
-//
-//    @FXML
-//    private Spinner mySpinnerLab;
-//
-//    @FXML
-//    private Spinner mySpinnerEvaluation;
-//
-//    int currentValue;
-//
-//
-//
-//    public void initialize(URL arg0, ResourceBundle arg1) {
-////        Insering  numbers method of drop down
-//        offerdyearChoice.getItems().addAll(offerdyear);
-//
-//
-////       adding a numbers to spinner
-//        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10);
-//        valueFactory.setValue(1);
-//
-//        SpinnerValueFactory<Integer> valueFactory1 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10);
-//        valueFactory1.setValue(1);
-//
-//        SpinnerValueFactory<Integer> valueFactory2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10);
-//        valueFactory2.setValue(1);
-//
-//        SpinnerValueFactory<Integer> valueFactory3 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1,10);
-//        valueFactory3.setValue(1);
-//
-//        mySpinnerTutorial.setValueFactory(valueFactory);
-//        mySpinnerLec.setValueFactory(valueFactory1);
-//        mySpinnerLab.setValueFactory(valueFactory2);
-//        mySpinnerEvaluation.setValueFactory(valueFactory3);
-//
-//
-//    }
 
 
 

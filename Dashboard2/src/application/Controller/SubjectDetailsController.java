@@ -4,16 +4,22 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 
 import application.Model.Student;
 
+
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -186,7 +192,7 @@ public class SubjectDetailsController implements Initializable {
         offerdsemesterTable.setCellValueFactory(new PropertyValueFactory<Student , String>("Offerdsemester"));
         subjectnameTable.setCellValueFactory(new PropertyValueFactory<Student , String>("SubjectName"));
         subjectcodeTable.setCellValueFactory(new PropertyValueFactory<Student , String>("SubjectCode"));
-        TutehrsTable.setCellValueFactory(new PropertyValueFactory<Student , String>("Numtutehrs"));
+        TutehrsTable.setCellValueFactory(new PropertyValueFactory<Student, String>("Numtutehrs"));
         LecturshrsTable.setCellValueFactory(new PropertyValueFactory<Student , String>("Numlechrs"));
         labhrsTable.setCellValueFactory(new PropertyValueFactory<Student,String>("Numlabhrs"));
         evaluationhrsTable.setCellValueFactory(new PropertyValueFactory<Student , String>("Numevalhrs"));
@@ -283,6 +289,36 @@ public class SubjectDetailsController implements Initializable {
 
 
     }
+
+    @FXML
+    void clear(ActionEvent event) {
+
+        idChoice.setText(" ");
+        subjectnameChoice.setText(" ");
+        subjectcodeChoice.setText(" ");
+        offerdyearChoice.setText(" ");
+        offerdsemesterChoice.setText(" ");
+        numoflecChoice.setText(" ");
+        numoflabChoice.setText(" ");
+        numofevaluationChoice.setText(" ");
+        numoftutehrsChoice.setText(" ");
+
+    }
+
+
+    @FXML
+    void next(ActionEvent event) throws IOException {
+
+
+        Parent root = FXMLLoader.load(getClass().getResource("/View/lectureSession.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage =new Stage();
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
+
 
 
 }

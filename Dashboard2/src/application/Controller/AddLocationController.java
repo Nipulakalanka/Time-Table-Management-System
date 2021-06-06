@@ -5,9 +5,9 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
-import java.sql.Statement;
+
 import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
@@ -57,9 +57,11 @@ public class AddLocationController implements Initializable {
 	 * 
 	 */
 	
+	public final static String cloudURL = "jdbc:mysql:itpmserver2021.mysql.database.azure.com:3306/itpm?autoReconnect=true&useSSL=false&verifyServerCertificate=false";
+	public final static String cloudUser = "itpmUser@itpmserver2021";
+	public final static String cloudUserPW = "itpm@1234";
 
-	private static Statement stmt = null;
-	private static ResultSet rs = null;
+
 	private static PreparedStatement preparedStatement =null;
 	Location location;
 	
@@ -79,23 +81,19 @@ public class AddLocationController implements Initializable {
 	}
 	
 	//database connection
-	public Connection getConnection() {
-		Connection con;
-		try{
-			con =DriverManager.getConnection("jdbc:mysql://itpmserver2021.mysql.database.azure.com:3306/itpmnew?autoReconnect=true&useSSL=false&verifyServerCertificate=false", "itpmUser@itpmserver2021","itpm@1234");
-			return con;
-			
-		}catch(Exception e) {
-			System.out.println("Error: "+e.getMessage());
-			return null;
-			
-			
-		}
+	public static Connection getConnection() throws ClassNotFoundException, SQLException {
+		Connection con =null;
+	
+		Class.forName("com.mysql.jdbc.Driver");
+		
+		con = DriverManager.getConnection(cloudURL, cloudUser, cloudUserPW);
+		
+		return con;
 	}
 	
 	//Click the save button for insert the values
 	@FXML
-	public void Save(MouseEvent event) {
+	public void Save(MouseEvent event) throws ClassNotFoundException, SQLException {
 		String bname = tfBname.getText();
 		String rname =tfRname.getText();
 		String rtype =getRadioButton();
@@ -141,7 +139,7 @@ public class AddLocationController implements Initializable {
 	}
 
 	//Data Insert Method
-	private void InserLocation() {
+	private void InserLocation() throws ClassNotFoundException, SQLException {
 		
 		/*String query =" INSERT INTO location" + " (bname, rname, rtype, cap) VALUES " + " (?,?,?,?);";
 		

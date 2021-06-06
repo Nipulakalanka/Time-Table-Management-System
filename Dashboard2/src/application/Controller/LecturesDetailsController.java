@@ -4,17 +4,23 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
+
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 
@@ -279,6 +285,30 @@ public class LecturesDetailsController implements Initializable {
 
     }
 
+    @FXML
+    void clear(ActionEvent event) {
 
+        lecnameChoice.setText(" ");
+        empidChoice.setText(" ");
+        facultyChoice.setText(" ");
+        departmentChoice.setText(" ");
+        buildingChoice.setText(" ");
+        levelChoice.setText(" ");
+        rankChoice.setText(" ");
+        centerChoice.setText(" ");
+
+    }
+
+    @FXML
+    void next(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("/View/subjects.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage =new Stage();
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
 
 }

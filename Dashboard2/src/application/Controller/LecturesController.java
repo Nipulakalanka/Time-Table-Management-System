@@ -15,6 +15,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
@@ -132,18 +133,18 @@ public class LecturesController implements Initializable{
 
         }
 
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/application/View/lecturesDetails.fxml"));
-
-            Scene scene = new Scene(root);
-            Stage stage =new Stage();
-            stage.setScene(scene);
-            stage.show();
-
-
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Parent root = FXMLLoader.load(getClass().getResource("lecturesDetails.fxml"));
+//
+//            Scene scene = new Scene(root);
+//            Stage stage =new Stage();
+//            stage.setScene(scene);
+//            stage.show();
+//
+//
+//        } catch(Exception e) {
+//            e.printStackTrace();
+//        }
 
 
     }
@@ -200,6 +201,34 @@ public class LecturesController implements Initializable{
             return null;
         }
     }
+
+
+    @FXML
+    void clear(ActionEvent event) {
+
+//        faculty.setItems(null);
+//        department.setItems(null);
+//        center.setItems(null);
+//        building.setItems(null);
+//        level.setItems(null);
+        empId.setText(" ");
+        rankGenerate.setText(" ");
+        lecName1.setText(" ");
+
+    }
+
+    @FXML
+    void next(ActionEvent event) throws IOException {
+
+        Parent root = FXMLLoader.load(getClass().getResource("/View/lecturesDetails.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage =new Stage();
+        stage.setScene(scene);
+        stage.show();
+
+
+    }
+
 
 }
 
